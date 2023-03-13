@@ -3,4 +3,4 @@ project(Classes4b)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Classes4b main.cpp Student.h Student.cpp DayType.cpp DayType.h)
+add_executable(Classes4b main.cpp Student.h Student.cpp DayType.cpp DayType.h Clock.cpp Clock.h)
