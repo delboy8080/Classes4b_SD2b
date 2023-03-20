@@ -36,3 +36,28 @@ void Clock::setTime( int hh, int mm, int ss )
     this->min = mm;
     this->sec = ss;
 }
+
+void Clock::incrementSecondsBy(int n )
+{
+    int total = sec + n;
+    sec = total %60;
+    if(total > 59)
+    {
+        incrementMinutesBy(total/60);
+    }
+}
+
+void Clock::incrementMinutesBy(int n )
+{
+    int total = min + n;
+    min = total %60;
+    if(total > 59)
+    {
+        incrementHoursBy(total/60);
+    }
+}
+
+void Clock::incrementHoursBy(int n )
+{
+   hrs = (hrs +n )%24;
+}

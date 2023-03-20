@@ -2,7 +2,7 @@
 #include <iomanip>
 #include "Student.h"
 #include "DayType.h"
-
+#include "Clock.h"
 
 using namespace std;
 
@@ -21,7 +21,7 @@ void display_student_by_pointer(const Student *stud)
     cout<<setw(15) << "Pointer" << setw(5) << stud->getId() << setw(20) <<stud->getName() << setw(5)
          << stud->getAge() << setw(8) << stud->getHeight() <<endl;
 }
-int main() {
+int Day_main() {
     DayType dt(6);
     cout << "Current Day: " ;
     dt.printCurrentDay();
@@ -38,13 +38,21 @@ int main() {
 
     dt.setCurrentDay(2);
     cout << "+13 days: " << dt.getFutureDay(13);
-
-
-
-
     return 0;
 }
 
+int main()
+{
+    Clock clock(23,59,59);
+    clock.displayCurrentTime();
+    clock.incrementSecondsBy(2);
+    cout << clock.getCurrentTime()<<endl;
+    clock.resetClock();
+    clock.displayCurrentTime();
+    clock.setTime(12,30,15);
+    clock.displayCurrentTime();
+
+}
 
 void studentMain()
 {

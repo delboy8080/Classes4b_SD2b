@@ -15,6 +15,13 @@ public:
     std::string getCurrentTime();
     void resetClock() ; // i.e. to 00:00:00
     void setTime( int hh, int mm, int ss );
+    void incrementSecondsBy(int n );
+    void incrementMinutesBy(int n );
+    void incrementHoursBy(int n );
+    int getElapsedTime();
+    int getRemainingTime();
+    void getDifference(const Clock &other);
+
 };
 
 
